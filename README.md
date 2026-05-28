@@ -22,6 +22,7 @@ When dealing with sensitive legal documents or dense educational textbooks, uplo
 * **(2)Semantic Vector Searching:** Chops long books into distinct paragraphs, converts them into embeddings, and queries them instantly using vector calculations.
 * **(3)Streamed Responses:** Generates context-bounded answers word-by-word directly on your local CPU/GPU hardware.
 
+
 ---
 
 ##  Future Enhancements
@@ -31,3 +32,26 @@ To scale this local prototype for institutional use, the following enhancements 
 * **Hybrid Search Retrieval:** Merge keyword matching (BM25) with semantic vector search to improve the retrieval accuracy of specific legal sub-clauses.
 * **Source Attribution UI:** Modify the Streamlit application interface to highlight the exact page numbers and chapter headers where the AI found its source material.
 * **Multi-Format Processing:** Extend the document loading system to support cross-referencing markdown files, raw text files, and docx tables simultaneously.
+##  How to Clone & Run
+
+You can spin up this private legal chatbot locally on your machine by running these steps in your terminal:
+
+```bash
+# 1. Clone the project and navigate into the folder
+git clone [https://github.com/prasannasavalla/local-rag-chatbot.git](https://github.com/prasannasavalla/local-rag-chatbot.git)
+cd local-rag-chatbot
+
+# 2. Set up and activate a clean Python virtual environment
+python -m venv venv
+# On Windows Command Prompt:
+venv\Scripts\activate.bat
+# On macOS / Linux: source venv/bin/activate
+
+# 3. Install the required Generative AI packages
+pip install -r requirements.txt
+
+# 4. Make sure Ollama is running in the background and pull the model
+ollama run qwen2.5:0.5b
+
+# 5. Launch the local web interface!
+streamlit run app.py
