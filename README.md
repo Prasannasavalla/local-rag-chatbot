@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/f9962f0b-3297-42e0-991b-9ad362ee0110
+
 # Private RAG Legal & Ethics Expert Chatbot ⚖️🤖
 
 ### Purpose of the Project
